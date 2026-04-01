@@ -37,6 +37,7 @@ const Layout = ({ children }) => {
 
   const siteName = settings?.siteName || "SHARMA INSURANCE & INVESTMENTS";
   const contactPhone = settings?.phone || "+91 7011432254";
+  const alternatePhone = settings?.alternatePhone || "";
   const contactEmail = settings?.email || "shivam.sh0023@gmail.com";
   const contactAddress = settings?.address || "12-A/4, Ground Floor, Old Rajinder Nagar, New Delhi - 110060";
 
@@ -135,7 +136,8 @@ const Layout = ({ children }) => {
               <h4>Global Connect</h4>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                 <p style={{ fontSize: '15px', display: 'flex', alignItems: 'center', gap: '12px' }}>
-                  <Phone size={14} color="var(--secondary)" /> {contactPhone}
+                  <Phone size={14} color="var(--secondary)" style={{ flexShrink: 0 }} /> 
+                  <span>{contactPhone}{alternatePhone ? ` / ${alternatePhone}` : ''}</span>
                 </p>
                 <p style={{ fontSize: '15px', display: 'flex', alignItems: 'center', gap: '12px' }}>
                   <Mail size={14} color="var(--secondary)" /> {contactEmail}

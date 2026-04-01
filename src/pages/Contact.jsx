@@ -162,6 +162,7 @@ const Contact = () => {
                 <div>
                   <h4 style={{ color: 'var(--white)', fontSize: '15px' }}>Professional Helpline</h4>
                   <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{settings?.phone || '+91 7011432254'}</p>
+                  {settings?.alternatePhone && <p style={{ color: 'var(--text-dim)', fontSize: '16px', marginTop: '4px' }}>{settings.alternatePhone}</p>}
                 </div>
               </div>
               <div className="glass-panel" style={{ padding: '25px', display: 'flex', alignItems: 'center', gap: '20px' }}>
