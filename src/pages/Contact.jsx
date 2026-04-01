@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { Mail, Phone, Send, Info, CheckCircle2, Star, Loader2 } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import { client } from '../lib/sanity';
 
 const Contact = () => {
   const location = useLocation();
@@ -15,6 +16,11 @@ const Contact = () => {
   const [text, setText] = useState('');
   const [photo, setPhoto] = useState(null);
   const [isSending, setIsSending] = useState(false);
+  const [settings, setSettings] = useState(null);
+
+  useEffect(() => {
+    client.fetch('*[_type == "settings"][0]').then(setSettings);
+  }, []);
 
   const countries = [
     { code: '+91', name: 'India' },
@@ -73,7 +79,7 @@ const Contact = () => {
       request_type: formType,
       message: notes,
       service_type: formData.get('service') || 'General',
-      to_email: 'shivam.sh0023@gmail.com'
+      to_email: settings?.email || 'shivam.sh0023@gmail.com'
     };
 
     try {
@@ -105,9 +111,10 @@ const Contact = () => {
       console.error('EmailJS Error:', error);
       // Fail-safeFallback
       if (formType !== 'feedback') {
+        const targetEmail = settings?.email || 'shivam.sh0023@gmail.com';
         const subject = `Sharma Insurance - ${formType.toUpperCase()} Request from ${name}`;
         const messageBody = `Name: ${name}\nPhone: ${fullPhone}\nRequest Type: ${formType}\nNotes: ${notes}`;
-        window.location.href = `mailto:shivam.sh0023@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
+        window.location.href = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(messageBody)}`;
       }
       setSubmitted(true);
     } finally {
@@ -154,14 +161,14 @@ const Contact = () => {
                 <div style={{ background: 'var(--primary-light)', padding: '12px', borderRadius: '4px', color: 'var(--secondary)' }}><Phone size={20} /></div>
                 <div>
                   <h4 style={{ color: 'var(--white)', fontSize: '15px' }}>Professional Helpline</h4>
-                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>+91 7011432254</p>
+                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{settings?.phone || '+91 7011432254'}</p>
                 </div>
               </div>
               <div className="glass-panel" style={{ padding: '25px', display: 'flex', alignItems: 'center', gap: '20px' }}>
                 <div style={{ background: 'var(--primary-light)', padding: '12px', borderRadius: '4px', color: 'var(--secondary)' }}><Mail size={20} /></div>
                 <div>
                   <h4 style={{ color: 'var(--white)', fontSize: '15px' }}>Email Inquiries</h4>
-                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>shivam.sh0023@gmail.com</p>
+                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{settings?.email || 'shivam.sh0023@gmail.com'}</p>
                 </div>
               </div>
             </div>
