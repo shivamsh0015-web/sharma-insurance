@@ -38,6 +38,7 @@ const Layout = ({ children }) => {
   const siteName = settings?.siteName || "SHARMA INSURANCE & INVESTMENTS";
   const contactPhone = settings?.phone || "+91 7011432254";
   const contactEmail = settings?.email || "shivam.sh0023@gmail.com";
+  const contactAddress = settings?.address || "12-A/4, Ground Floor, Old Rajinder Nagar, New Delhi - 110060";
 
   return (
     <div className="app-container" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
@@ -141,7 +142,7 @@ const Layout = ({ children }) => {
                 </p>
                 <p style={{ fontSize: '14px', color: 'var(--text-dim)', display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
                   <MapPin size={14} color="var(--secondary)" style={{ flexShrink: 0, marginTop: '4px' }} /> 
-                  12-A/4, Ground Floor, Old Rajinder Nagar, New Delhi - 110060
+                  {contactAddress}
                 </p>
               </div>
             </div>
