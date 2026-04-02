@@ -31,6 +31,7 @@ function App() {
         
         {/* Service Details */}
         <Route path="/services/mutual-funds" element={<MutualFunds />} />
+        <Route path="/services/portfolio-analysis" element={<MutualFunds />} />
         <Route path="/services/term-insurance" element={<TermInsurance />} />
         <Route path="/services/cyber-insurance" element={<CyberInsurance />} />
         <Route path="/services/education-planning" element={<EducationPlanning />} />
