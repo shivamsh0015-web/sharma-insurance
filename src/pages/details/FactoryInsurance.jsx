@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Factory, ShieldCheck, Flame, Zap, Package, CheckCircle2, Construction } from 'lucide-react';
+import { Factory, ShieldCheck, Flame, Zap, Package, CheckCircle2, Construction, Settings, Warehouse } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';

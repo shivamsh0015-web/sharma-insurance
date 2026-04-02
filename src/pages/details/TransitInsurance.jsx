@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Package, ShieldCheck, Truck, Ship, Anchor, MapPin } from 'lucide-react';
+import { Package, ShieldCheck, Truck, Ship, Anchor, MapPin, Milestone, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';

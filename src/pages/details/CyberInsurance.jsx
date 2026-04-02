@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Lock, ShieldAlert, Cpu, Network } from 'lucide-react';
+import { Lock, ShieldAlert, Cpu, Network, ShieldCheck, Globe, CheckCircle2, AlertTriangle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';

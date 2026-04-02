@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Scale, ShieldCheck, Gavel, Briefcase, FileCheck, Landmark, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Scale, ShieldCheck, Gavel, Briefcase, FileCheck, Landmark, CheckCircle2, AlertCircle, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';
