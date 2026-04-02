@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, Instagram, Menu, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Linkedin, Menu, X } from 'lucide-react';
 
 import { client } from '../lib/sanity';
 
@@ -125,6 +125,16 @@ const Layout = ({ children }) => {
                   aria-label="Instagram"
                 >
                   <Instagram size={18} color="var(--secondary)" />
+                </a>
+                <a 
+                  href="https://www.linkedin.com/in/yogesh-sharma-72a453227?utm_source=share_via&utm_content=profile&utm_medium=member_android" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="glass-panel" 
+                  style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} 
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={18} color="var(--secondary)" />
                 </a>
               </div>
             </div>
