@@ -17,6 +17,7 @@ import RetirementPlanning from './pages/details/RetirementPlanning';
 import LiabilityInsurance from './pages/details/LiabilityInsurance';
 import TransitInsurance from './pages/details/TransitInsurance';
 import CarInsurance from './pages/details/CarInsurance';
+import PortfolioAnalysis from './pages/details/PortfolioAnalysis';
 import DynamicServiceDetail from './pages/details/DynamicServiceDetail';
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
         
         {/* Service Details */}
         <Route path="/services/mutual-funds" element={<MutualFunds />} />
-        <Route path="/services/portfolio-analysis" element={<MutualFunds />} />
+        <Route path="/services/portfolio-analysis" element={<PortfolioAnalysis />} />
         <Route path="/services/term-insurance" element={<TermInsurance />} />
         <Route path="/services/cyber-insurance" element={<CyberInsurance />} />
         <Route path="/services/education-planning" element={<EducationPlanning />} />
