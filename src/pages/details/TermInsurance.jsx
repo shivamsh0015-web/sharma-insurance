@@ -24,7 +24,7 @@ const TermInsurance = () => {
             comprehensive protection plan. High coverage with low premiums.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Check Premium</Link>
+            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Start Planning</Link>
           </div>
         </motion.div>
       </section>
