@@ -71,6 +71,13 @@ const Services = () => {
       desc: "Pure protection for your family at an affordable cost, ensuring they are always secure.",
       path: "/services/term-insurance",
       image: "/life_insurance.png"
+    },
+    {
+      title: "Mutual Fund Advisory",
+      icon: <TrendingUp size={40} />,
+      desc: "Trusted by over 1000+ mutual fund clients for wealth creation. Research-driven fund selection.",
+      path: "/services/mutual-funds",
+      image: "/advisor.png"
     }
   ];
 
@@ -165,24 +172,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Mutual Funds & Claim Settlement */}
+      {/* Claim Settlement Assurance */}
       <section>
-        <div className="grid grid-2" style={{ justifyContent: 'center' }}>
-          <Link to="/services/mutual-funds" style={{ display: 'block' }}>
-            <motion.div className="glass-panel" style={{ padding: '50px', height: '100%' }} {...fadeIn} whileHover={{ y: -8, borderColor: 'var(--secondary)' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
-                <TrendingUp size={40} color="var(--secondary)" />
-                <h3>Mutual Fund Advisory</h3>
-              </div>
-              <p style={{ color: 'var(--text-dim)', marginBottom: '20px' }}>
-                Trusted by over 1000+ mutual fund clients for wealth creation. Click to see our portfolio strategies.
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', color: 'var(--secondary)', fontWeight: 'bold' }}>
-                Analyze Portfolio <ArrowRight size={16} />
-              </div>
-            </motion.div>
-          </Link>
-
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
           <motion.div className="glass-panel" style={{ padding: '50px' }} {...fadeIn}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '15px', marginBottom: '20px' }}>
               <HeartHandshake size={40} color="var(--secondary)" />
@@ -192,7 +184,7 @@ const Services = () => {
               Our commitment goes beyond planning. We provide hand-held assistance 
               during claims to ensure a smooth, worry-free settlement process.
             </p>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: 'var(--secondary)', flexWrap: 'wrap' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '20px', color: 'var(--secondary)', flexWrap: 'wrap' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 size={18} /> Transparent Process</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}><CheckCircle2 size={18} /> 24/7 Claim Support</div>
             </div>
