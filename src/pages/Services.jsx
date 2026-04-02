@@ -79,7 +79,7 @@ const Services = () => {
     { title: "Liability Insurance", icon: <Scale />, path: "/services/liability-insurance", desc: "Professional liability protection for businesses." },
     { title: "Cyber Crime", icon: <Lock />, path: "/services/cyber-insurance", desc: "Protecting your digital assets and identity." },
     { title: "Open Policy Transit", icon: <Package />, path: "/services/transit-insurance", desc: "Safe transportation of goods with coverage." },
-    { title: "Car Insurance", icon: <Car />, path: "/contact", state: { defaultTab: 'quote' }, desc: "Best-in-class motor insurance with 24/7 support." }
+    { title: "Car Insurance", icon: <Car />, path: "/services/car-insurance", desc: "Best-in-class motor insurance with 24/7 support." }
   ];
 
   // Merge Dynamic Services

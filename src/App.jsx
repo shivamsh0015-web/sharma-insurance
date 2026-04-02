@@ -16,6 +16,7 @@ import FactoryInsurance from './pages/details/FactoryInsurance';
 import RetirementPlanning from './pages/details/RetirementPlanning';
 import LiabilityInsurance from './pages/details/LiabilityInsurance';
 import TransitInsurance from './pages/details/TransitInsurance';
+import CarInsurance from './pages/details/CarInsurance';
 import DynamicServiceDetail from './pages/details/DynamicServiceDetail';
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/services/retirement-planning" element={<RetirementPlanning />} />
         <Route path="/services/liability-insurance" element={<LiabilityInsurance />} />
         <Route path="/services/transit-insurance" element={<TransitInsurance />} />
+        <Route path="/services/car-insurance" element={<CarInsurance />} />
         
         {/* Fallback for Dynamic Services from Sanity */}
         <Route path="/services/:slug" element={<DynamicServiceDetail />} />

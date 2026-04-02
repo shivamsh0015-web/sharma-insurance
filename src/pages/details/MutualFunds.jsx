@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, PieChart, ShieldCheck, ArrowUpRight, BarChart3, Target } from 'lucide-react';
+import { TrendingUp, PieChart, ShieldCheck, ArrowUpRight, BarChart3, Target, Activity, Search, RefreshCw, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';
@@ -50,33 +50,60 @@ const MutualFunds = () => {
         </div>
       </section>
 
-      {/* Why Us */}
+      {/* Portfolio Audit Process */}
       <section>
-        <div className="grid grid-2" style={{ alignItems: 'center' }}>
+        <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+          <h2 className="heading-l" style={{ justifyContent: 'center' }}>Our Portfolio Audit Process</h2>
+          <p style={{ color: 'var(--text-dim)', maxWidth: '700px', margin: '20px auto' }}>
+            We don't just sell funds; we engineer wealth. Our 4-step audit ensures 
+            your existing and future investments are aligned with your life goals.
+          </p>
+        </div>
+        <div className="grid grid-4">
+          {[
+            { title: "Risk Profiling", icon: <Activity />, desc: "Understanding your psychological and financial capacity for market volatility." },
+            { title: "Fund Research", icon: <Search />, desc: "Deep-dive analysis into fund manager performance and alpha generation." },
+            { title: "Diversification", icon: <PieChart />, desc: "Optimal asset allocation across Large, Mid, Small caps and Debt." },
+            { title: "Periodic Review", icon: <RefreshCw />, desc: "Quarterly rebalancing to book profits and stay on track with targets." }
+          ].map((item, i) => (
+            <div key={i} className="glass-panel" style={{ padding: '30px', textAlign: 'center' }}>
+              <div style={{ color: 'var(--secondary)', marginBottom: '15px', display: 'flex', justifyContent: 'center' }}>{item.icon}</div>
+              <h4 style={{ marginBottom: '10px' }}>{item.title}</h4>
+              <p style={{ fontSize: '13px', color: 'var(--text-dim)' }}>{item.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Expertise */}
+      <section style={{ background: 'var(--primary-light)' }}>
+        <div className="grid grid-2" style={{ alignItems: 'center', gap: '40px' }}>
           <div>
-            <h2 className="heading-l">Expert Portfolio Management</h2>
+            <h2 className="heading-l">Executive Wealth Advisory</h2>
             <p style={{ color: 'var(--text-dim)', marginBottom: '30px' }}>
-              We don't just sell funds; we manage your financial health. Our 26 years of 
-              experience helps us identify the right opportunities in any market cycle.
+              With 26 years of market exposure, Sharma Insurance & Investments 
+              brings an institutional-grade approach to retail wealth management.
             </p>
-            <ul style={{ display: 'grid', gap: '20px' }}>
+            <div style={{ display: 'grid', gap: '20px' }}>
               {[
                 { icon: <Target />, text: "Goal-Based Selection (Marriage, Education, Retirement)" },
-                { icon: <BarChart3 />, text: "Regular Portfolio Review & Rebalancing" },
-                { icon: <ArrowUpRight />, text: "Tax-Efficient Investment Strategies" }
+                { icon: <BarChart3 />, text: "Regular Portfolio Review & Alpha Tracking" },
+                { icon: <ArrowUpRight />, text: "Tax-Efficient Withdrawal Strategies & SWPs" },
+                { icon: <FileText />, text: "Consolidated Statement & Performance Reporting" }
               ].map((item, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--white)' }}>
+                <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '15px', color: 'var(--white)' }}>
                   <div style={{ color: 'var(--secondary)' }}>{item.icon}</div>
-                  {item.text}
-                </li>
+                  <span style={{ fontSize: '15px' }}>{item.text}</span>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
-          <div className="glass-panel" style={{ padding: '40px', textAlign: 'center' }}>
-             <TrendingUp size={100} color="var(--secondary)" style={{ opacity: 0.1, position: 'absolute', top: '10px', right: '10px' }} />
-             <h2 style={{ fontSize: '60px', color: 'var(--secondary)' }}>1000+</h2>
-             <p>Active Investors Trusted Our Advice</p>
-             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary" style={{ marginTop: '30px' }}>Get Free Portfolio Review</Link>
+          <div className="glass-panel" style={{ padding: '60px', textAlign: 'center', position: 'relative', overflow: 'hidden' }}>
+             <TrendingUp size={200} color="var(--secondary)" style={{ opacity: 0.05, position: 'absolute', bottom: '-50px', right: '-50px' }} />
+             <h2 style={{ fontSize: '72px', color: 'var(--secondary)', fontWeight: '800', lineHeight: 1 }}>1000+</h2>
+             <p style={{ letterSpacing: '2px', textTransform: 'uppercase', fontSize: '12px', marginTop: '10px', color: 'var(--text-dim)' }}>Clients Trust Our Advice</p>
+             <div style={{ height: '2px', background: 'var(--secondary)', width: '50px', margin: '30px auto' }}></div>
+             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Book Consultation</Link>
           </div>
         </div>
       </section>
