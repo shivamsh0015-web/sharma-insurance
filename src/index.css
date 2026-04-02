@@ -137,11 +137,17 @@ h1, h2, h3, h4 {
   border: 1px solid var(--secondary);
 }
 
-.btn-primary:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 15px 35px -10px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
-  background: var(--white);
-  border-color: var(--white);
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) {
+  .btn-primary:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 35px -10px hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.4);
+    background: var(--white);
+    border-color: var(--white);
+  }
 }
 
 .btn-outline {
@@ -151,11 +157,17 @@ h1, h2, h3, h4 {
   backdrop-filter: blur(10px);
 }
 
-.btn-outline:hover {
-  border-color: var(--secondary);
-  color: var(--secondary);
-  transform: translateY(-4px);
-  background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
+.btn-outline:active {
+  transform: scale(0.98);
+}
+
+@media (hover: hover) {
+  .btn-outline:hover {
+    border-color: var(--secondary);
+    color: var(--secondary);
+    transform: translateY(-4px);
+    background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
+  }
 }
 
 /* Premium Glass Cards */
@@ -168,10 +180,17 @@ h1, h2, h3, h4 {
   box-shadow: var(--shadow-md);
 }
 
-.glass-panel:hover {
-  border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3);
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-lg), 0 0 40px var(--glass-glow);
+.glass-panel:active {
+  transform: scale(0.98);
+  background: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.05);
+}
+
+@media (hover: hover) {
+  .glass-panel:hover {
+    border-color: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.3);
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg), 0 0 40px var(--glass-glow);
+  }
 }
 
 /* Responsive Grid System */
