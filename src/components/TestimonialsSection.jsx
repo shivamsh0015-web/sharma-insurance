@@ -49,7 +49,15 @@ const TestimonialsSection = () => {
 
   return (
     <section className="testimonials-section">
-      <motion.h2 className="heading-l" style={{ justifyContent: 'center' }} {...fadeIn}>Client Voice</motion.h2>
+      <div style={{ textAlign: 'center' }}>
+        <motion.h2 className="heading-l" style={{ justifyContent: 'center' }} {...fadeIn}>Client Voice</motion.h2>
+        <button 
+          onClick={() => { localStorage.removeItem('sharma_testimonials'); window.location.reload(); }}
+          style={{ background: 'transparent', border: '1px solid var(--secondary)', color: 'var(--text-dim)', padding: '4px 10px', fontSize: '10px', borderRadius: '4px', cursor: 'pointer', marginTop: '10px' }}
+        >
+          Reset Local Tests
+        </button>
+      </div>
       <div className="grid grid-3" style={{ marginTop: '50px' }}>
         {testimonials.map((t, i) => (
           <motion.div 
