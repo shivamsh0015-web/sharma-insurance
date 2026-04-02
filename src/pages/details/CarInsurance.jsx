@@ -68,7 +68,7 @@ const CarInsurance = () => {
               <LifeBuoy size={100} color="var(--secondary)" style={{ opacity: 0.2, marginBottom: '20px' }} />
               <h3>Instant Assistance</h3>
               <p style={{ color: 'var(--text-dim)', margin: '15px 0' }}>Help is just a call away, anywhere, anytime.</p>
-              <a href="tel:+917011432254" className="btn btn-outline" style={{ marginTop: '10px' }}>Emergency Number</a>
+              <a href="tel:+918130283126" className="btn btn-outline" style={{ marginTop: '10px' }}>Emergency Number</a>
            </div>
         </div>
       </section>
