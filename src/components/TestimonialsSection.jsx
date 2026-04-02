@@ -10,19 +10,30 @@ const TestimonialsSection = () => {
   useEffect(() => {
     // Fetch from Sanity
     client.fetch('*[_type == "testimonial"]').then(data => {
+      let fetchedTestimonials = [];
       if (data && data.length > 0) {
-        setTestimonials(data);
+        fetchedTestimonials = data;
       } else {
         // Fallback to static if Sanity is empty
-        setTestimonials(initialTestimonials.map(t => ({
+        fetchedTestimonials = initialTestimonials.map(t => ({
           name: t.name,
           role: t.role,
           text: t.text,
           stars: t.stars,
           photo: t.photo, // static path
           init: t.init
-        })));
+        }));
       }
+
+      // Merge with any instant feedback submitted on this device
+      const saved = localStorage.getItem('sharma_testimonials');
+      if (saved) {
+        const localTestimonials = JSON.parse(saved);
+        setTestimonials([...localTestimonials, ...fetchedTestimonials]);
+      } else {
+        setTestimonials(fetchedTestimonials);
+      }
+      
     }).catch(err => {
       console.log("Sanity Testimonials error", err);
       setTestimonials(initialTestimonials);
