@@ -87,7 +87,7 @@ const DynamicServiceDetail = () => {
               Connect with India's most trusted insurance advisor. We help you choose the right path for your family and business.
             </p>
             <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
-               <a href="tel:+918130283126" className="btn btn-primary"><Phone size={18} /> Call +91-8130283126</a>
+               <a href="tel:+917011432254" className="btn btn-primary"><Phone size={18} /> Call +91-7011432254</a>
                <Link to="/contact" className="btn btn-outline"><Mail size={18} /> Email Inquiry</Link>
             </div>
          </div>

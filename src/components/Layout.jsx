@@ -36,7 +36,7 @@ const Layout = ({ children }) => {
   ];
 
   const siteName = settings?.siteName || "SHARMA INSURANCE & INVESTMENTS";
-  const contactPhone = settings?.phone || "+91 8130283126";
+  const contactPhone = settings?.phone || "+91 7011432254";
   const alternatePhone = settings?.alternatePhone || "";
   const contactEmail = settings?.email || "shivam.sh0023@gmail.com";
   const contactAddress = settings?.address || "12-A/4, Ground Floor, Old Rajinder Nagar, New Delhi - 110060";

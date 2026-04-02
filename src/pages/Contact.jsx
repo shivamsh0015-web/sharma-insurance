@@ -161,7 +161,7 @@ const Contact = () => {
                 <div style={{ background: 'var(--primary-light)', padding: '12px', borderRadius: '4px', color: 'var(--secondary)' }}><Phone size={20} /></div>
                 <div>
                   <h4 style={{ color: 'var(--white)', fontSize: '15px' }}>Professional Helpline</h4>
-                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{settings?.phone || '+91 8130283126'}</p>
+                  <p style={{ color: 'var(--text-dim)', fontSize: '16px' }}>{settings?.phone || '+91 7011432254'}</p>
                   {settings?.alternatePhone && <p style={{ color: 'var(--text-dim)', fontSize: '16px', marginTop: '4px' }}>{settings.alternatePhone}</p>}
                 </div>
               </div>
