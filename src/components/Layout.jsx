@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Mail, Phone, MapPin, Twitter, Linkedin, Facebook, Menu, X } from 'lucide-react';
+import { Mail, Phone, MapPin, Instagram, Menu, X } from 'lucide-react';
 
 import { client } from '../lib/sanity';
 
@@ -116,9 +116,16 @@ const Layout = ({ children }) => {
                 tailored to individual and corporate life cycles.
               </p>
               <div style={{ display: 'flex', gap: '16px' }}>
-                <a href="#" className="glass-panel" style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Twitter"><Twitter size={16} /></a>
-                <a href="#" className="glass-panel" style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="LinkedIn"><Linkedin size={16} /></a>
-                <a href="#" className="glass-panel" style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} aria-label="Facebook"><Facebook size={16} /></a>
+                <a 
+                  href="https://www.instagram.com/insurancebysharma?igsh=a3cxcG0wb21lbHZj" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="glass-panel" 
+                  style={{ width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center' }} 
+                  aria-label="Instagram"
+                >
+                  <Instagram size={18} color="var(--secondary)" />
+                </a>
               </div>
             </div>
             
