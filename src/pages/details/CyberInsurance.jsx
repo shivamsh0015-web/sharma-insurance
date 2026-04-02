@@ -25,7 +25,6 @@ const CyberInsurance = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Protect Now</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Free Risk Audit</Link>
           </div>
         </motion.div>
       </section>

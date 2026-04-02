@@ -25,7 +25,6 @@ const TermInsurance = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Check Premium</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Free Consultation</Link>
           </div>
         </motion.div>
       </section>

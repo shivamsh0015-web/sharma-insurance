@@ -25,8 +25,7 @@ const PortfolioAnalysis = () => {
             and provide a high-performance analyzed plan.
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Request Free Audit</Link>
-            <a href="#audit-process" className="btn btn-outline">Our Audit Process</a>
+            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Request Audit</Link>
           </div>
         </motion.div>
       </section>

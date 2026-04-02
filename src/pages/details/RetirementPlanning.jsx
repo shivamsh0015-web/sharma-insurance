@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Palmtree, ShieldCheck, HeartPulse, Wallet, Calculator, TrendingUp, DollarSign, PiggyBank, Briefcase, CheckCircle2 } from 'lucide-react';
+import { Palmtree, ShieldCheck, HeartPulse, Wallet, TrendingUp, DollarSign, PiggyBank, Briefcase, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import FloatingElements from '../../components/FloatingElements';
 import TestimonialsSection from '../../components/TestimonialsSection';
@@ -25,7 +25,6 @@ const RetirementPlanning = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Start Planning</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Check Pensions</Link>
           </div>
         </motion.div>
       </section>

@@ -31,7 +31,6 @@ const MutualFunds = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Start Investing</Link>
-            <a href="#schemes" className="btn btn-outline">Explore Schemes</a>
           </div>
         </motion.div>
       </section>

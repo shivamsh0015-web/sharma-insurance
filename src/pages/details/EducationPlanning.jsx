@@ -25,7 +25,6 @@ const EducationPlanning = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Plan Now</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Calculators</Link>
           </div>
         </motion.div>
       </section>

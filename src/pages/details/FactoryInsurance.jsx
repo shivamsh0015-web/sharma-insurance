@@ -25,7 +25,6 @@ const FactoryInsurance = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Get Quote</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Site Visit</Link>
           </div>
         </motion.div>
       </section>

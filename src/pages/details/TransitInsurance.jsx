@@ -25,7 +25,6 @@ const TransitInsurance = () => {
           </p>
           <div style={{ display: 'flex', gap: '20px', justifyContent: 'center' }}>
             <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-primary">Secure Shipment</Link>
-            <Link to="/contact" state={{ defaultTab: 'quote' }} className="btn btn-outline">Sample Policy</Link>
           </div>
         </motion.div>
       </section>
