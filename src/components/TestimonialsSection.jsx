@@ -25,14 +25,8 @@ const TestimonialsSection = () => {
         }));
       }
 
-      // Merge with any instant feedback submitted on this device
-      const saved = localStorage.getItem('sharma_testimonials');
-      if (saved) {
-        const localTestimonials = JSON.parse(saved);
-        setTestimonials([...localTestimonials, ...fetchedTestimonials]);
-      } else {
-        setTestimonials(fetchedTestimonials);
-      }
+      // No longer merging with localStorage as per request
+      setTestimonials(fetchedTestimonials);
       
     }).catch(err => {
       console.log("Sanity Testimonials error", err);

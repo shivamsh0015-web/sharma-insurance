@@ -83,19 +83,9 @@ const Contact = () => {
     };
 
     try {
-      // 1. Data Persistence (Feedback only)
+      // 1. Data Persistence removed as per request
       if (formType === 'feedback') {
-        const saved = localStorage.getItem('sharma_testimonials');
-        const testimonials = saved ? JSON.parse(saved) : [];
-        const newFeedback = {
-          name,
-          role: "Verified Client",
-          text,
-          stars: rating,
-          photo,
-          init: name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
-        };
-        localStorage.setItem('sharma_testimonials', JSON.stringify([newFeedback, ...testimonials]));
+        // No longer saving to localStorage
       }
 
       // 3. Professional EmailJS Send
