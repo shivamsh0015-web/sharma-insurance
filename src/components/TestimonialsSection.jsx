@@ -8,30 +8,16 @@ const TestimonialsSection = () => {
   const [testimonials, setTestimonials] = useState([]);
 
   useEffect(() => {
-    // Fetch from Sanity
-    client.fetch('*[_type == "testimonial"]').then(data => {
-      let fetchedTestimonials = [];
-      if (data && data.length > 0) {
-        fetchedTestimonials = data;
-      } else {
-        // Fallback to static if Sanity is empty
-        fetchedTestimonials = initialTestimonials.map(t => ({
-          name: t.name,
-          role: t.role,
-          text: t.text,
-          stars: t.stars,
-          photo: t.photo, // static path
-          init: t.init
-        }));
-      }
-
-      // No longer merging with localStorage as per request
-      setTestimonials(fetchedTestimonials);
-      
-    }).catch(err => {
-      console.log("Sanity Testimonials error", err);
-      setTestimonials(initialTestimonials);
-    });
+    // Only show the strictly provided testimonials as requested
+    const fetchedTestimonials = initialTestimonials.map(t => ({
+      name: t.name,
+      role: t.role,
+      text: t.text,
+      stars: t.stars,
+      photo: t.photo, // static path
+      init: t.init
+    }));
+    setTestimonials(fetchedTestimonials);
   }, []);
 
   const fadeIn = {
